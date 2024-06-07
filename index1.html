@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles1.css">
+  <title>Prodavnica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+  <style>
+    body{
+    font-family: "New Rocker", system-ui;
+    font-weight: 100px;
+    font-style: normal;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dobrodošli u našu prodavnicu</h1>
+    <a href="index.html">
+      <button id="buttonback">Nazad na početnu stranu</button>
+    </a>
+    <h2>Nadamo se da ćete pronaći sve što tražite!</h2>
+  </header>
+ 
+  <div class="container">
+    <div class="category" id="category1" onclick="toggleProducts('products1')">
+      <h2>Rukavice</h2>
+      <div class="products" id="products1"></div>
+    </div>
+
+    <div class="category" id="category2" onclick="toggleProducts('products2')">
+      <h2>Štitnici</h2>
+      <div class="products" id="products2"></div>
+    </div>
+
+    <div class="category" id="category3" onclick="toggleProducts('products3')">
+      <h2>Bandažeri</h2>
+      <div class="products" id="products3"></div>
+    </div>
+
+    <div class="category" id="category4" onclick="toggleProducts('products4')">
+      <h2>Guma za zube</h2>
+      <div class="products" id="products4"></div>
+    </div>
+
+    <div class="category" id="category5" onclick="toggleProducts('products5')">
+      <h2>Šorts</h2>
+      <div class="products" id="products5"></div>
+    </div>
+  </div>
+
+  <div class="cover_button-container">
+    <button class="cover_button" id="showOrders" onclick="showOrderedProducts()">Prikži poručene proizvode<span class="cover_button-span">
+    </span><span class="cover_button-span"></span><span class="cover_button-span"></span></button>
+</div>
+
+<div id="orderListContainer" style="display: none;">
+  <h2>Poručeni proizvodi</h2>
+  <ul id="orderList"></ul>
+  <button onclick="hideOrderList()">Zatvori</button>
+</div>
+
+<div id="notification" class="notification" style="display: none;">
+  Proizvod je dodat u korpu.
+</div>
+
+  <script src="script1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url("pozadina4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  header {
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: 100px;
+  }
+
+  .container {
+    max-width: 1500px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .category {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .category h2 {
+    text-align: center;
+    color: #dadada;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+  }
+
+  .products {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .product {
+    font-weight: 100px;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #000000;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+
+  .product img {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+  }
+  #buttonback{
+    font-family: "New Rocker", system-ui;
+    font-weight: 30px;
+    font-size: 15px;
+    padding: 3px 15px;
+    background: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 70%;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s all;
+  }
+  
+  #buttonback:hover{
+      color: black;
+  }
+  #buttonback:hover{
+    color: rgb(168, 0, 0);
+  }
+
+  button{
+    font-family: "New Rocker", system-ui;
+    font-size: 15px;
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s all;
+    margin: 5px;
+}
+
+  button:hover{
+    color: rgb(255, 0, 0);
+}
+
+.cover_button-container{
+  height: 50%;
+}
+
+.cover_button{
+  font-family: "New Rocker", system-ui;
+  font-size: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: 3px solid white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: .5s all;
+  margin: 5px;
+}
+
+.cover_button:hover{
+  color: black;
+}
+
+.cover_button-span{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: .5s transform;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.cover_button:hover .cover_button-span{
+  transform: translateY(0) scale(2);
+}
+.cover_button-span:nth-child(1){
+  --n: 1;
+}
+.cover_button-span:nth-child(2){
+  --n: 2;
+}
+.cover_button-span:nth-child(3){
+  --n: 3;
+}
+.cover_button-span:nth-child(4){
+  --n: 4;
+}
+
+.notification {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #4caf50; /* Zelena boja */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000; /* Da bude iznad svih elemenata */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#orderListContainer {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#orderList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#orderList li {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+#orderList img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#orderList .product-name {
+  font-weight: bold;
+}
+
+#orderList .product-price {
+  color: #888;
+}
+
+#orderListContainer button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#orderListContainer button:hover {
+  background-color: #0056b3;
+}
